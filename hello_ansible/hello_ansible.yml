@@ -1,0 +1,9 @@
+- hosts: localhost
+  vars:
+    - myname: Joseba
+  tasks:
+    - name: Returns greeting and hostname
+      hello_ansible: name=myname
+      register: greeting
+
+    - debug: var=greeting
