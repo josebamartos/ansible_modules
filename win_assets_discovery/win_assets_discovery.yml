@@ -1,0 +1,8 @@
+- hosts: windows
+
+  tasks:
+    - name: Assets discovery
+      win_assets_discovery:
+      register: assets_discovery
+
+    - debug: var=assets_discovery

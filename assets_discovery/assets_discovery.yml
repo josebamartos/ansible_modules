@@ -1,0 +1,9 @@
+- hosts: jboss
+
+  tasks:
+    - name: Assets discovery
+      assets_discovery:
+      register: assets_discovery
+
+    - debug: var=assets_discovery
+    - debug: var=ansible_facts
